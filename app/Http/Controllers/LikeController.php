@@ -10,6 +10,7 @@ class LikeController extends Controller
     public function store(Request $request, Post $post)
     {
         // Agrega el like al post
+        // New
         $post->likes()->create([
             'user_id' => $request->user()->id
         ]);
